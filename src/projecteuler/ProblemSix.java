@@ -1,0 +1,28 @@
+package projecteuler;
+
+public class ProblemSix {
+
+//    The sum of the squares of the first ten natural numbers is
+//    (1*1)+(2*2)+...+(10*10) = 385
+//    The square of the sum of the first ten natural numbers is,
+//    (1+2+...+10)^2 = 55^2 = 3025
+//    Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is.
+//    Find the difference between the sum of the squares of the first one hundred natural numbers
+//    and the square of the sum.
+
+    public static int calculate(int a) {
+        return a * (a + 1) * (3 * a + 2) * (a - 1) / 12;
+    }
+
+    public static int calculateOld(int a) {
+        return squareOfTheSum(a) - sumOfTheSquare(a);
+    }
+
+    public static int sumOfTheSquare(int a) {
+        return a * (a + 1) * (2 * a + 1) / 6;
+    }
+
+    public static int squareOfTheSum(int a) {
+        return ((a * (a + 1)) / 2) * ((a * (a + 1)) / 2);
+    }
+}
