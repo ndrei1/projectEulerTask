@@ -13,16 +13,4 @@ public class ProblemSix {
     public static int calculate(int a) {
         return a * (a + 1) * (3 * a + 2) * (a - 1) / 12;
     }
-
-    public static int calculateOld(int a) {
-        return squareOfTheSum(a) - sumOfTheSquare(a);
-    }
-
-    public static int sumOfTheSquare(int a) {
-        return a * (a + 1) * (2 * a + 1) / 6;
-    }
-
-    public static int squareOfTheSum(int a) {
-        return ((a * (a + 1)) / 2) * ((a * (a + 1)) / 2);
-    }
 }

@@ -68,11 +68,6 @@ public class ProblemEighthTest {
     }
 
     @Test
-    public void calculateStep13() {
-        assertEquals(4354560, calculate("22345333678123",13));
-    }
-
-    @Test
     public void calculate8Step1() {
         assertEquals(8, calculate("22345333678123",1));
     }
@@ -82,9 +77,4 @@ public class ProblemEighthTest {
         assertEquals(56, calculate("22345333678123",2));
     }
 
-    @Test
-    public void calculate100Step13() {
-        assertEquals(34292160,calculate("22345333770634533367223453336722345330672234533367203" +
-                "45333672234533367220453336722345333672234533361",13));
-    }
 }

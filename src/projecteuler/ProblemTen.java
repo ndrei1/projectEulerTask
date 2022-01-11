@@ -1,29 +1,38 @@
 package projecteuler;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ProblemTen {
+//    The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+//    Find the sum of all the primes below two million.
 
-    public static long calculate(int lastNumber) {
-        if (lastNumber <= 2) {
-            if (lastNumber == 1) {
-                return 0;
-            }
-            return lastNumber;
-        }
-        long sum = 2;
-        for (int i = 3; i < lastNumber; i += 2) {
-            if (isPrime(i)) {
-                sum += i;
+    public static boolean[] isPrime(int max) {
+        boolean[] prime = new boolean[max];
+        Arrays.fill(prime, true);
+        for (int i = 2; i * i < max; i++) {
+            for (int j = 2 * i; j < max; j += i) {
+                prime[j] = false;
             }
         }
-        return sum;
+        return prime;
     }
 
-    public static boolean isPrime(int number) {
-        for (int i = 3; i <= Math.sqrt(number); i += 2) {
-            if (number % i == 0) {
-                return false;
+    public static long calculate(int max) {
+        List<Long> integers = new ArrayList<>();
+        if (max == 2) {
+            return 2;
+        }
+        boolean[] prime = isPrime(max);
+        for (int i = 2; i < max; i++) {
+            if (prime[i]) {
+                integers.add((long) i);
             }
         }
-        return true;
+        return integers.stream().reduce(0L, Long::sum);
     }
+
+
 }
+

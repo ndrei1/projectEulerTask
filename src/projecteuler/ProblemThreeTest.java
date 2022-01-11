@@ -54,7 +54,7 @@ public class ProblemThreeTest {
     }
 
     @Test
-    public void calculate886() {
+    public void calculate888() {
         assertEquals(37, calculate(888));
     }
 

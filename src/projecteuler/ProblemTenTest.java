@@ -37,9 +37,4 @@ public class ProblemTenTest {
         assertEquals(2, calculate(2));
     }
 
-    @Test
-    public void calculate1999() {
-        assertEquals(275051, calculate(1999));
-    }
-
 }

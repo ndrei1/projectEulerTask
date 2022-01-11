@@ -2,8 +2,11 @@ package projecteuler;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 import static projecteuler.ProblemNine.calculate;
+import static projecteuler.ProblemNine.pythagoreanTriplet;
 
 public class ProblemNineTest {
 
@@ -13,8 +16,8 @@ public class ProblemNineTest {
     }
 
     @Test
-    public void calculate2000() {
-        assertEquals(123750000, calculate(2000));
+    public void calculate60() {
+        assertEquals(60, calculate(12));
     }
 
     @Test
@@ -27,4 +30,13 @@ public class ProblemNineTest {
         assertEquals(-1, calculate(0));
     }
 
+    @Test
+    public void pythagoreanTriplet3and4and5() {
+        assertEquals(Arrays.toString(new int[]{3, 4, 5}), Arrays.toString(pythagoreanTriplet(12)));
+    }
+
+    @Test
+    public void pythagoreanTriplet8and15and17() {
+        assertEquals(Arrays.toString(new int[]{8, 15, 17}), Arrays.toString(pythagoreanTriplet(40)));
+    }
 }
